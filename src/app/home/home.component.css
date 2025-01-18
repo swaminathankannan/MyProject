@@ -1,74 +1,81 @@
  /* Text Animations */
  .show {
-    animation: fadeIn 2s ease-in-out;
-}
+     animation: fadeIn 2s ease-in-out;
+ }
 
-.carousel.one {
-    animation: slideInLeft 1.5s ease-in-out;
-}
+ .carousel.one {
+     animation: slideInLeft 1.5s ease-in-out;
+ }
 
-.carousel.two {
-    animation: slideInRight 1.5s ease-in-out;
-}
+ .carousel.two {
+     animation: slideInRight 1.5s ease-in-out;
+ }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
 
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+     to {
+         opacity: 1;
+     }
+ }
 
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+ @keyframes slideInLeft {
+     from {
+         transform: translateX(-100%);
+         opacity: 0;
+     }
 
-/* Gradient Text */
-h1 span {
-    background: linear-gradient(90deg, #56ab2f, #a8e063);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+     to {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
 
-/* Carousel Image Effects */
-.carousel-img {
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    border-radius: 15px;
-    height: 500px; /* Adjust height as needed */
-    object-fit: cover; /* Ensures the image fills the container proportionally */
-}
+ @keyframes slideInRight {
+     from {
+         transform: translateX(100%);
+         opacity: 0;
+     }
 
-.carousel-img:hover {
-    transform: scale(1.05);
-}
+     to {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
 
-/* Carousel Controls Styling */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1) brightness(0.8);
-}
+ /* Gradient Text */
+ h1 span {
+     background: linear-gradient(90deg, #56ab2f, #a8e063);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
 
-@media (max-width: 768px) {
-    .carousel-img {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-}
+ /* Carousel Image Effects */
+ .carousel-img {
+     transition: transform 0.5s ease, box-shadow 0.5s ease;
+     border-radius: 15px;
+     height: 500px;
+     /* Adjust height as needed */
+     object-fit: cover;
+     /* Ensures the image fills the container proportionally */
+ }
+
+ .carousel-img:hover {
+     transform: scale(1.05);
+ }
+
+ /* Carousel Controls Styling */
+ .carousel-control-prev-icon,
+ .carousel-control-next-icon {
+     filter: invert(1) brightness(0.8);
+ }
+
+ @media (max-width: 768px) {
+     .carousel-img {
+         height: 300px;
+         /* Adjust height for smaller screens */
+     }
+ }
