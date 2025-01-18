@@ -1,0 +1,49 @@
+.nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #031D44;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #031D44;
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+}
+/* .navbar.navbar-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: black !important;
+    /* Ensure the links are visible */
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background-color: #fff; /* Add a background color to make it visible */
+    /* Bootstrap default for navbar */
+}
