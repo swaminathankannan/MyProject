@@ -3,7 +3,7 @@
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #031D44;
+    color: #00DFC0;
     padding: 20px 0px;
     margin: 0px 20px;
     display: inline-block;
@@ -20,16 +20,13 @@
     height: 5px;
     content: "";
     position: absolute;
-    background-color: #031D44;
+    background-color: #00DFC0;
 }
 
 .nav-link-ltr::before {
     width: 0%;
     bottom: 10px;
 }
-/* .navbar.navbar-shadow {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
 
 .nav-link-ltr:hover::before {
     width: 100%;
@@ -37,13 +34,24 @@
 
 .navbar .nav-link {
     color: black !important;
-    /* Ensure the links are visible */
 }
 
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1050;
-    background-color: #fff; /* Add a background color to make it visible */
-    /* Bootstrap default for navbar */
+    background-color: #fff;
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 3;
+    }
 }
