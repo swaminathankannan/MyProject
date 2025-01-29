@@ -55,3 +55,16 @@
         opacity: 3;
     }
 }
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic Section Styling */
+section {
+    height: 100vh;
+    /* Full-screen sections */
+    padding: 50px;
+    text-align: center;
+}

@@ -1,0 +1,187 @@
+ /* General Footer Styles */
+ .footer {
+    background: linear-gradient(135deg, #002B36, #00DFC0);
+    color: white;
+    padding: 50px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 280px;
+    margin: 20px;
+    text-align: left;
+}
+
+/* Logo Animation */
+.logo {
+    width: 80px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Fancy Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-links a {
+    color: #00DFC0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Contact Info */
+.address, .contact-info {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.address i, .contact-info i {
+    margin-right: 8px;
+    color: #00DFC0;
+}
+
+/* Social Icons */
+.footer-socials a {
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.footer-socials a:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(0, 223, 192, 0.8);
+}
+
+/* Fancy Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.glow:hover {
+    text-shadow: 0px 0px 10px rgba(0, 223, 192, 1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .footer-socials {
+        text-align: center;
+    }
+}
+
+ /* General Footer Center Styles */
+ .footer-center {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.address, .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Fancy Icon Styles */
+.fancy-icon {
+    font-size: 22px;
+    color: #00DFC0;
+    margin-right: 12px;
+    transition: transform 0.3s ease-in-out, color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.fancy-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(0, 223, 192, 0.8);
+}
+
+/* Address & Contact Info Text */
+.contact-info p, .address p {
+    font-size: 15px;
+    color: white;
+    margin: 0;
+}
+
+/* Email Link Hover */
+.contact-info a {
+    text-decoration: none;
+    color: #00DFC0;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 8px rgba(0, 223, 192, 1);
+}

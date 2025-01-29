@@ -5,10 +5,12 @@ import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from "./skills/skills.component";
 import { CommonModule } from '@angular/common';
+import { ContactMeComponent } from './contact-me/contact-me.component';
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TopBarComponent, HomeComponent, AboutComponent, SkillsComponent,CommonModule],
+  imports: [RouterOutlet, TopBarComponent, HomeComponent, AboutComponent, SkillsComponent, CommonModule, ContactMeComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
