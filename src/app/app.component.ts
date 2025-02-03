@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FooterComponent } from "./footer/footer.component";
 import { ProjectsComponent } from "./projects/projects.component";
+import { NotfoundComponent } from "./notfound/notfound.component";
 
 @Component({
   selector: 'app-root',
