@@ -16,7 +16,7 @@
     height: 5px;
     content: "";
     position: absolute;
-    background-color: #00DFC0;
+    background-color: #1bc3ad;
 }
 
 .nav-link-ltr::before {
@@ -29,14 +29,14 @@
 }
 
 .navbar .nav-link {
-    color: #bde9e3 !important;
+    color: #ffffff !important;
 }
 
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1050;
-    background-color: #fff;
+    background-color: #d13333;
     animation: slideDown 0.8s ease-out;
 }
 
@@ -45,18 +45,6 @@
     color: #fff !important;
     text-shadow: 0px 0px 15px rgba(0, 223, 192, 0.8);
     /* Change color on hover */
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 3;
-    }
 }
 
 .navbar {
@@ -79,7 +67,7 @@
     opacity: 0.3;
     /* Adjust transparency */
     z-index: -1;
-    animation: moveBackground 10s infinite linear;
+    animation: moveBackground 2s infinite linear;
 }
 
 @keyframes moveBackground {
@@ -93,5 +81,18 @@
 
     100% {
         background-position: 0% 50%;
+    }
+}
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 3;
     }
 }
