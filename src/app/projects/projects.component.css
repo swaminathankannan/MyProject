@@ -105,14 +105,14 @@
 }
 
 .title {
-    font-size: 11px;
+    font-size: 14px;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .title p {
-    width: 50%;
+    width: 100%;
 }
 
 .card-footer {
