@@ -39,6 +39,14 @@
      filter: invert(1) brightness(0.8);
  }
 
+ .bgimage {
+     background-image: url('/assets/homebgimage.jpg');
+     background-position: center;
+     background-size: cover;
+     height: 90vh;
+     background-repeat: no-repeat;    
+ }
+
  @media (max-width: 768px) {
      .carousel-img {
          height: 300px;
