@@ -13,14 +13,13 @@
     align-items: flex-start;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .footer-left, .footer-center, .footer-right {
     flex: 1;
-    min-width: 280px;
-    margin: 20px;
-    text-align: left;
+    /* min-width: 280px; */
+    /* text-align: left; */
 }
 
 /* Logo Animation */
@@ -66,7 +65,7 @@
 
 .address i, .contact-info i {
     margin-right: 8px;
-    color: #00DFC0;
+    /* color: #00DFC0; */
 }
 
 /* Social Icons */
@@ -101,29 +100,25 @@
     }
 }
 
-.bounce {
-    animation: bounce 2s infinite ease-in-out;
-}
-
-@keyframes bounce {
+/* @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-5px);
     }
-}
+} */
 
-.glow {
+/* .glow {
     transition: all 0.3s ease-in-out;
 }
 
 .glow:hover {
     text-shadow: 0px 0px 10px rgba(0, 223, 192, 1);
-}
+} */
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -137,7 +132,7 @@
     .footer-socials {
         text-align: center;
     }
-}
+} */
 
  /* General Footer Center Styles */
  .footer-center {
@@ -177,7 +172,6 @@
 .contact-info a {
     text-decoration: none;
     color: #00DFC0;
-    font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 

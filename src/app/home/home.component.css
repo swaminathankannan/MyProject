@@ -55,7 +55,6 @@
      font-size: 40px;
      color: rgb(16, 15, 15);
      cursor: pointer;
-     animation: bounce 1.5s infinite;
  }
 
  .scroll-down a {
@@ -63,23 +62,9 @@
      color: inherit;
  }
 
- @keyframes bounce {
-
-     0%,
-     100% {
-         transform: translateY(0);
-     }
-
-     50% {
-         transform: translateY(10px);
-     }
- }
-
-
- @media (max-width: 768px) {
+ @media (max-width: 500px) {
      .carousel-img {
-         height: 300px;
-         /* Adjust height for smaller screens */
+         height: 250px;
      }
  }
 
