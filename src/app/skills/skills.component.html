@@ -1,135 +1,145 @@
-<div class="container py-5">
-  <div class="row align-items-center">
-    <div class="skills-section">
-      <div class="tabs-wrapper">
-        <div class="tabs">
-          <button class="tab-link" [class.active]="activeTab === 'skills'" (click)="setActiveTab('skills')">
-            Skills
-          </button>
-          <button class="tab-link" [class.active]="activeTab === 'tools'" (click)="setActiveTab('tools')">
-            Tools
-          </button>
-        </div>
-      </div>
-
-      <!-- TWO TABS SKILLS AND TOOLS -->
-      <div id="skills" class="tab-content" [class.active]="activeTab === 'skills'">
-        <div class="skills-container">
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/html5.png" alt="" class="skills-icons">
-              </div>
-              <h3>Html</h3>
-            </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/css3.png" alt="" class="skills-icons">
-              </div>
-              <h3>Css</h3>
-            </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/javascript.png" alt="" class="skills-icons">
-              </div>
-              <h3>Javascript</h3>
-            </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/angular.jpeg" alt="" class="skills-icons">
-              </div>
-              <h3>Angular</h3>
-            </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/bootstrap.png" alt="" class="skills-icons">
-              </div>
-              <h3>Bootstrap</h3>
-            </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/typescriptlogo.png" alt="" class="skills-icons">
-              </div>
-              <h3>Typescript</h3>
-            </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/sonarQubeLogo.png" alt="" class="skills-icons">
-              </div>
-              <h3>Sonarqube</h3>
-            </div>
+<div class="padding">
+  <div class="container py-5 mt-4">
+    <div class="row align-items-center">
+      <div class="skills-section">
+        <div class="tabs-wrapper">
+          <div class="tabs">
+            <button class="tab-link" [class.active]="activeTab === 'skills'" (click)="setActiveTab('skills')">
+              Skills
+            </button>
+            <button class="tab-link" [class.active]="activeTab === 'tools'" (click)="setActiveTab('tools')">
+              Tools
+            </button>
           </div>
         </div>
-      </div>
 
-      <div id="tools" class="tab-content" [class.active]="activeTab === 'tools'">
-        <div class="skills-container">
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/adobe-photoshop.png" alt="" class="skills-icons">
+        <!-- TWO TABS SKILLS AND TOOLS -->
+        <div id="skills" class="tab-content" [class.active]="activeTab === 'skills'">
+          <div class="skills-container">
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/html5.png" alt="" class="skills-icons">
+                </div>
+                <h3>Html</h3>
               </div>
-              <h3>PHOTOSHOP</h3>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/css3.png" alt="" class="skills-icons">
+                </div>
+                <h3>Css</h3>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/javascript.png" alt="" class="skills-icons">
+                </div>
+                <h3>Javascript</h3>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/angular.jpeg" alt="" class="skills-icons">
+                </div>
+                <h3>Angular</h3>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/bootstrap.png" alt="" class="skills-icons">
+                </div>
+                <h3>Bootstrap</h3>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/typescriptlogo.png" alt="" class="skills-icons">
+                </div>
+                <h3>Typescript</h3>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/sonarQubeLogo.png" alt="" class="skills-icons">
+                </div>
+                <h3>Sonarqube</h3>
+              </div>
             </div>
           </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/npm.png" alt="" class="skills-icons">
+        </div>
+
+        <div id="tools" class="tab-content" [class.active]="activeTab === 'tools'">
+          <div class="skills-container">
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/adobe-photoshop.png" alt="" class="skills-icons">
+                </div>
+                <h3>PHOTOSHOP</h3>
               </div>
-              <h3>Npm</h3>
             </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/vs-code.png" alt="" class="skills-icons">
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/npm.png" alt="" class="skills-icons">
+                </div>
+                <h3>Npm</h3>
               </div>
-              <h3>VS code</h3>
             </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/git.png" alt="" class="skills-icons">
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/vs-code.png" alt="" class="skills-icons">
+                </div>
+                <h3>VS code</h3>
               </div>
-              <h3>Git</h3>
             </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/github.png" alt="" class="skills-icons">
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/git.png" alt="" class="skills-icons">
+                </div>
+                <h3>Git</h3>
               </div>
-              <h3>Github</h3>
             </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/netlify.png" alt="" class="skills-icons">
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/github.png" alt="" class="skills-icons">
+                </div>
+                <h3>Github</h3>
               </div>
-              <h3>Netlify</h3>
             </div>
-          </div>
-          <div class="skills-box">
-            <div class="skills-title">
-              <div class="skills-img">
-                <img src="/assets/vercel-icon.jpg" alt="" class="skills-icons">
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/netlify.png" alt="" class="skills-icons">
+                </div>
+                <h3>Netlify</h3>
               </div>
-              <h3>Vercel</h3>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/vercel-icon.jpg" alt="" class="skills-icons">
+                </div>
+                <h3>Vercel</h3>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-title">
+                <div class="skills-img">
+                  <img src="/assets/postman.png" alt="" class="skills-icons-postman">
+                </div>
+                <h3>Postman</h3>
+              </div>
             </div>
           </div>
         </div>

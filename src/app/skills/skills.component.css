@@ -76,6 +76,12 @@
     z-index: 2;
 }
 
+.skills-icons-postman {
+    width: 90px;
+    z-index: 1;
+    padding-right: 10px;
+}
+
 .skills-box.in-view {
     opacity: 1;
     transform: translateY(0);

@@ -47,6 +47,17 @@
     /* Change color on hover */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-link.active {
+    color: #ff9800 !important;
+    font-weight: bold;
+}
+
+
+
 .navbar {
     position: sticky;
     top: 0;

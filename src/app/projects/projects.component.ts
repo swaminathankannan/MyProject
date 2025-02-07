@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule], // ✅ Import CommonModule
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
 })

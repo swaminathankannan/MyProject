@@ -7,9 +7,29 @@
 }
 
 .themeColor {
-    color: #00DFC0;
+    color: #41b7ab;
 }
 
-.greyColor {
+.themebgColor {
+    background-color: #41b7ab;
+}
+
+.light-themeColor {
+    color: #447d85
+}
+
+.light-themebgColor {
+    background-color: #447e8585
+}
+
+.bgWhiteColor {
     background-color: #f7f7f7;
+}
+
+.sandal {
+    color: #f4ebd1;
+}
+
+.dark-blue {
+    color: #031925
 }
