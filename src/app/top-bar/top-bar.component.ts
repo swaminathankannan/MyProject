@@ -30,8 +30,6 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrls: ['./top-bar.component.css'],
 })
 export class TopBarComponent implements OnInit {
-  activeSection: string = 'home';
-
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -44,20 +42,6 @@ export class TopBarComponent implements OnInit {
 
   navigateTo(path: string) {
     this.router.navigate([path]);
-  }
-
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-    sections.forEach((section) => {
-      const el = document.getElementById(section);
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-          this.activeSection = section;
-        }
-      }
-    });
   }
 
   scrollToSection(sectionId: string): void {

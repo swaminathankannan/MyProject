@@ -13,10 +13,10 @@
     font-weight: bold;
     font-size: 14px;
     transition: all .15s ease;
-}
-
-.button::before,
-.button::after {
+  }
+  
+  .button::before,
+  .button::after {
     content: '';
     display: block;
     position: absolute;
@@ -25,38 +25,38 @@
     height: calc(50% - 5px);
     border: 1px solid #7D8082;
     transition: all .15s ease;
-}
-
-.button::before {
+  }
+  
+  .button::before {
     top: 0;
     border-bottom-width: 0;
-}
-
-.button::after {
+  }
+  
+  .button::after {
     bottom: 0;
     border-top-width: 0;
-}
-
-.button:active,
-.button:focus {
+  }
+  
+  .button:active,
+  .button:focus {
     outline: none;
-}
-
-.button:active::before,
-.button:active::after {
+  }
+  
+  .button:active::before,
+  .button:active::after {
     right: 3px;
     left: 3px;
-}
-
-.button:active::before {
+  }
+  
+  .button:active::before {
     top: 3px;
-}
-
-.button:active::after {
+  }
+  
+  .button:active::after {
     bottom: 3px;
-}
-
-.button_lg {
+  }
+  
+  .button_lg {
     position: relative;
     display: block;
     padding: 10px 20px;
@@ -64,9 +64,9 @@
     background-color: #0f1923;
     overflow: hidden;
     box-shadow: inset 0px 0px 0px 1px transparent;
-}
-
-.button_lg::before {
+  }
+  
+  .button_lg::before {
     content: '';
     display: block;
     position: absolute;
@@ -75,9 +75,9 @@
     width: 2px;
     height: 2px;
     background-color: #0f1923;
-}
-
-.button_lg::after {
+  }
+  
+  .button_lg::after {
     content: '';
     display: block;
     position: absolute;
@@ -87,32 +87,32 @@
     height: 4px;
     background-color: #0f1923;
     transition: all .2s ease;
-}
-
-.button_sl {
+  }
+  
+  .button_sl {
     display: block;
     position: absolute;
     top: 0;
     bottom: -1px;
     left: -8px;
     width: 0;
-    background-color: #00DFC0;
+    background-color: #ff4655;
     transform: skew(-15deg);
-    transition: all .4s ease;
-}
-
-.button_text {
+    transition: all .2s ease;
+  }
+  
+  .button_text {
     position: relative;
-}
-
-.button:hover {
+  }
+  
+  .button:hover {
     color: #0f1923;
-}
-
-.button:hover .button_sl {
+  }
+  
+  .button:hover .button_sl {
     width: calc(100% + 15px);
-}
-
-.button:hover .button_lg::after {
+  }
+  
+  .button:hover .button_lg::after {
     background-color: #fff;
-}
+  }  

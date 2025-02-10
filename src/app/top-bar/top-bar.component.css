@@ -16,7 +16,8 @@
     height: 5px;
     content: "";
     position: absolute;
-    background-color: #1bc3ad;
+    background-color: #bc96a2;
+    /* background-image: url('/assets/neat.png'); */
 }
 
 .nav-link-ltr::before {
@@ -32,15 +33,11 @@
     color: #ffffff !important;
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1050;
-    background-color: #d13333;
+.navbar-nav,.navbar-brand {
     animation: slideDown 0.8s ease-out;
 }
 
-.navbar-nav .nav-link:hover {
+.nav-link:hover {
     transform: scale(1.2);
     color: #fff !important;
     text-shadow: 0px 0px 15px rgba(0, 223, 192, 0.8);
@@ -51,14 +48,11 @@ html {
     scroll-behavior: smooth;
 }
 
-.nav-link.active {
-    color: #ff9800 !important;
-    font-weight: bold;
-}
-
-
-
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background-color: #d13333;
     position: sticky;
     top: 0;
     width: 100%;
@@ -98,7 +92,7 @@ html {
 
 @keyframes slideDown {
     from {
-        transform: translateY(-100%);
+        transform: translateY(-200%);
         opacity: 0;
     }
 

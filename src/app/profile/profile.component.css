@@ -86,7 +86,7 @@ img {
 }
 
 .home {
-    background-image: url('/assets/darkBgimage.jpg');
+    background-image: url('/assets/bgImageLandingPage.jpg');
     background-size: cover;
     height: fit-content;
     background-position: center;
