@@ -1,21 +1,17 @@
-<div class="page_404">
-    <div class="container">
+<div class="page_404 d-flex align-items-center justify-content-center vh-100">
+    <div class="container text-center">
         <div class="row">
-            <div class="col-sm-12 ">
-                <div class="col-sm-10 col-sm-offset-1  text-center">
-                    <div class="four_zero_four_bg">
-                        <h1 class="text-center ">404</h1>
-                    </div>
+            <div class="col-12 col-md-6 mx-auto">
+                <div class="four_zero_four_bg">
+                    <h1 class="text-center display-1 fw-bold">404</h1>
+                </div>
 
-                    <div class="contant_box_404">
-                        <h3 class="h2">
-                            Look like you're lost
-                        </h3>
-
-                        <p>the page you are looking for not avaible!</p>
-                        <button class="btn" (click)="router.navigate(['/home'])"><i class="animation"></i>Click to home<i class="animation"></i>
-                        </button>
-                    </div>
+                <div class="contant_box_404 mt-4">
+                    <h3 class="h2">Looks like you're lost</h3>
+                    <p class="text-muted">The page you are looking for is not available!</p>
+                    <button class="btn btn-primary mt-3" (click)="router.navigate(['/home'])">
+                        <i class="animation"></i> Click to Home <i class="animation"></i>
+                    </button>
                 </div>
             </div>
         </div>
