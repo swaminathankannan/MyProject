@@ -1,36 +1,60 @@
-<div class="padding">
-    <div class="container p-4">
-        <h2 class="h1 dark-blue text-center">About Me</h2>
-        <div class="row align-items-center">
-            <!-- Image Section -->
-            <div class="col-md-6 col-lg-5">
-                <div class="img-about">
-                    <img src="/assets/aboutUs.png" alt="About Image" class="img-fluid">
+<div class="padding" style="background-color: rgba(169, 169, 169, 0.074);">
+    <div class="row align-items-center">
+        <!-- Image Section -->
+        <div class="col-md-6 col-lg-5 text-center">
+            <img src="/assets/aboutUs.png" alt="About Image" class="img-fluid rounded">
+        </div>
+        <!-- Content Section -->
+        <div class="col-md-6 col-lg-7">
+            <h2 class="h1 text-center mb-4">About Me</h2>
+            <!-- Desktop version -->
+            <div class="desktop text-center">
+                <div class="d-flex justify-content-center">
+                    <div class="col-lg-6">
+                        <div id="carouselDesktop" class="carousel slide">
+                            <div class="d-flex align-items-center justify-content-center gap-4">
+                                <button (click)="prevSlide()" [disabled]="isPrevDisabled()" class="btn-carousel">
+                                    <img *ngIf="!isPrevDisabled()" src="assets/UparrowActive.png" alt="Previous">
+                                    <img *ngIf="isPrevDisabled()" src="assets/UparrowDisabled.png" alt="Disabled">
+                                </button>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item" *ngFor="let item of carouselItems; let i = index"
+                                        [class.active]="i === 0">
+                                        <h3 class="fs30 fw-bold">{{ item.title }}</h3>
+                                        <p class="fs18" [innerHTML]="item.description"></p>
+                                    </div>
+                                </div>
+                                <button (click)="nextSlide()" [disabled]="isNextDisabled()" class="btn-carousel">
+                                    <img *ngIf="!isNextDisabled()" src="assets/DownarrowActive.png" alt="Next">
+                                    <img *ngIf="isNextDisabled()" src="assets/DownarrowDisabled.png" alt="Disabled">
+                                </button>
+                            </div>
+                            <p class="mt-3 fs16">{{ activeSlide }}/{{ totalSlides }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Content Section -->
-            <div class="col-md-6 col-lg-7 pl-lg-5">
-                <div class="heading-section">
-                    <p class="h5">
-                        Hi! I’m Swaminathan, As a dedicated Front-End Developer and Software Engineer, I am
-                        passionate about creating intuitive user experiences through modern
-                        web technologies.aspiring to contribute to innovative
-                        projects that integrate front-end system seamlessly.
-                    </p>
-                    <ul class="about-info list-unstyled mt-4">
-                        <li class="mb-2"><strong>Name:</strong> Swaminathan K</li>
-                        <li class="mb-2"><strong>Date of Birth:</strong> January 01, 2002</li>
-                        <li class="mb-2"><strong>Address:</strong> 119, North street manakkal agraharam
-                            lalgudi</li>
-                        <li class="mb-2"><strong>Email:</strong> swaminathankannank&#64;gmail.com</li>
-                        <li class="mb-2"><strong>Phone:</strong> +91 63745 28425</li>
-                    </ul>
-                    <div class="mt-4">
-                        <a href="https://drive.google.com/file/d/1CQCPixNW1-pFyXcJvgTJRVFAAxTu6quT/view?usp=drivesdk"
-                            class="btn themebgColor custom-button zoom-in-bottom" target="_blank"
-                            rel="noopener noreferrer">
-                            Download CV
-                        </a>
+
+            <!-- Mobile Version -->
+            <div class="mobile text-center mt-4">
+                <div id="carouselMobile" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item" *ngFor="let item of carouselItems; let i = index"
+                            [class.active]="i === 0">
+                            <h3 class="fs28 fw-bold">{{ item.title }}</h3>
+                            <p class="fs16" [innerHTML]="item.description"></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-3">
+                        <button (click)="prevSlide()" [disabled]="isPrevDisabled()" class="btn-carousel">
+                            <img *ngIf="!isPrevDisabled()" src="assets/mobileEnableleft.png" alt="Previous">
+                            <img *ngIf="isPrevDisabled()" src="assets/mobileDisableleft.png" alt="Disabled">
+                        </button>
+                        <p class="mx-3 fs16">{{ activeSlide }}/{{ totalSlides }}</p>
+                        <button (click)="nextSlide()" [disabled]="isNextDisabled()" class="btn-carousel">
+                            <img *ngIf="!isNextDisabled()" src="assets/mobileEnableright.png" alt="Next">
+                            <img *ngIf="isNextDisabled()" src="assets/mobileDisableRight.png" alt="Disabled">
+                        </button>
                     </div>
                 </div>
             </div>

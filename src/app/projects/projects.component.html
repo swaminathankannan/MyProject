@@ -1,72 +1,48 @@
-<section class="container">
-    <h2 class="h1 dark-blue text-center">Projects</h2>
+<section>
+	<div class="text-center">
+		<h2 class="h1 dark-blue text-center pb-5">Projects</h2>
+		<h1>See My Works Which Will Amaze You!</h1>
+		<p class="Poppins h4">
+			Develop the best quality website that serves for the long term. Well-documented, clean,
+			easy, and elegant interface helps any non-technical clients.
+		</p>
+	</div>
 
-    <div class="text-center mb-4">
-        <h1>See My Works Which Will Amaze You!</h1>
-        <hr>
-        <p class="Poppins h4">
-            Develop the best quality website that serves for the long term. Well-documented, clean,
-            easy, and elegant interface helps any non-technical clients.
-        </p>
-    </div>
-
-    <!-- Swiper Container -->
-    <div class="swiper">
-        <div class="swiper-wrapper">
-
-            <!-- Project 1: Certified Recycled Plastics -->
-            <div class="swiper-slide swiper-slide--one">
-                <div>
-                    <h2 class="project-title">Certified Recycled Plastics®</h2>
-                    <p class="project-description">
-                        Certified Recycled Plastics provides sustainable plastic solutions, ensuring
-                        quality and compliance with industry standards. Explore their initiatives and
-                        innovative approach to recycling.
-                    </p>
-                    <a href="https://www.certifiedrecycledplastic.com/" target="_blank" class="project-link">Explore</a>
-                </div>
-            </div>
-
-            <!-- Project 2: Plastic Finder -->
-            <div class="swiper-slide swiper-slide--two">
-                <div>
-                    <h2 class="project-title">Plastic Finder</h2>
-                    <p class="project-description">
-                        Plastic Finder is an online marketplace for buying and selling recycled plastic
-                        materials, helping industries connect with sustainable solutions.
-                    </p>
-                    <a href="https://www.plasticfinder.it/en" target="_blank" class="project-link">Explore</a>
-                </div>
-            </div>
-
-            <!-- Project 3: Portfolio -->
-            <div class="swiper-slide swiper-slide--three">
-                <div>
-                    <h2 class="project-title">Portfolio</h2>
-                    <p class="project-description">
-                        My personal portfolio showcases my web development projects, skills, and experience.
-                        Visit to explore my latest works and contributions to the tech industry.
-                    </p>
-                    <a href="https://swaminathan-portfolio.vercel.app/home" target="_blank"
-                        class="project-link">Explore</a>
-                </div>
-            </div>
-
-            <!-- Future Projects (Commented Out for Now) -->
-            <!-- <div class="swiper-slide swiper-slide--four">
-                <div>
-                    <h2>Project Name</h2>
-                    <p>Project description goes here.</p>
-                    <a href="#" target="_blank">Explore</a>
-                </div>
-            </div> -->
-        </div>
-
-        <!-- Swiper Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <!-- Background Images -->
-    <img src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" alt="" class="bg">
-    <img src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" alt="" class="bg2">
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="contenedor">
+				<div *ngFor="let card of cards; let i = index" class="card"
+					[ngClass]="{ 'principal': i === currentStep, 'siguiente': i > currentStep, 'anterior': i < currentStep }"
+					[style.backgroundColor]="card.backgroundColor" ontouchstart="onTouchStart($event)"
+					ontouchend="onTouchEnd($event)">
+					<div class="card-image">
+						<img [src]="card.image" [alt]="card.title">
+						<div class="overlay">
+							<a [href]="card.link" target="_blank" class="link-icon">
+								<i class="fas fa-external-link-alt"></i>
+							</a>
+						</div>
+					</div>
+					<div class="card-content" style="background-color: white;">
+						<h3>{{ card.title }}</h3>
+						<p>{{ card.description }}</p>
+						<div class="card-navigation">
+							<div>
+								<span *ngFor="let dot of cards; let j = index" class="dot"
+									[ngClass]="{'active-dot': j === currentStep}">
+								</span>
+							</div>
+							<div class="buttons">
+								<button *ngIf="currentStep > 0" (click)="previousCard()"
+									class="previous-button">&#8592;</button>
+								<button *ngIf="currentStep < cards.length - 1" (click)="nextCard()"
+									class="next-button">&#8594;</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
 </section>
