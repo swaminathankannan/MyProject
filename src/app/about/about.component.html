@@ -24,7 +24,7 @@
                                         <div class="carousel-item" *ngFor="let item of carouselItems; let i = index"
                                             [class.active]="i === 0">
                                             <h3 class="fw-bold light-themeColor">{{ item.title }}</h3>
-                                            <p class="text-md-start" [innerHTML]="item.description"></p>
+                                            <p class="text-md-start mt-5" [innerHTML]="item.description"></p>
                                         </div>
                                     </div>
                                     <button (click)="nextSlide()" [disabled]="isNextDisabled()" class="btn-carousel">
@@ -37,49 +37,9 @@
                         </div>
                     </div>
                     <div class="mt-4">
-                        <button class="button">
-                            <span class="button-content light-themeColor">Download </span>
-                        </button>
-                        <div class="mt-4">
-                            <a href="https://drive.google.com/file/d/1CQCPixNW1-pFyXcJvgTJRVFAAxTu6quT/view?usp=drivesdk"
-                                class="btn light-themeColor text-uppercase fw-bold px-4 py-2" target="_blank"
-                                rel="noopener noreferrer">
-                                Download CV
-                            </a>
-                        </div>
+                        <button #downloadbtn (click)="downloadCv()">Download CV</button>
                     </div>
                 </div>
-
-                <!-- Mobile Version -->
-                <!-- <div class="mobile text-center mt-4">
-                    <div id="carouselMobile" class="carousel slide">
-                        <div class="carousel-inner">
-                            <div class="carousel-item" *ngFor="let item of carouselItems; let i = index"
-                                [class.active]="i === 0">
-                                <h3 class="fw-bold light-themeColor">{{ item.title }}</h3>
-                                <p class="text-md-start" [innerHTML]="item.description"></p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mt-3">
-                            <button (click)="prevSlide()" [disabled]="isPrevDisabled()" class="btn-carousel">
-                                <img *ngIf="!isPrevDisabled()" src="assets/mobileEnableleft.png" alt="Previous">
-                                <img *ngIf="isPrevDisabled()" src="assets/mobileDisableleft.png" alt="Disabled">
-                            </button>
-                            <p class="mx-3">{{ activeSlide }}/{{ totalSlides }}</p>
-                            <button (click)="nextSlide()" [disabled]="isNextDisabled()" class="btn-carousel">
-                                <img *ngIf="!isNextDisabled()" src="assets/mobileEnableright.png" alt="Next">
-                                <img *ngIf="isNextDisabled()" src="assets/mobileDisableRight.png" alt="Disabled">
-                            </button>
-                        </div>
-                        <div class="mt-4">
-                            <a href="https://drive.google.com/file/d/1CQCPixNW1-pFyXcJvgTJRVFAAxTu6quT/view?usp=drivesdk"
-                                class="btn light-themeColor text-uppercase fw-bold px-4 py-2" target="_blank"
-                                rel="noopener noreferrer">
-                                Download CV
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
