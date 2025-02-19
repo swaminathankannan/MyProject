@@ -1,103 +1,147 @@
- /* Text Animations */
- .show {
-     animation: fadeIn 2s ease-in-out;
- }
+/* Text Animations */
+.show {
+    animation: fadeIn 2s ease-in-out;
+}
 
- .carousel.one {
-     animation: slideInLeft 1.5s ease-in-out;
- }
+.carousel.one {
+    animation: slideInLeft 1.5s ease-in-out;
+}
 
- .carousel.two {
-     animation: slideInRight 1.5s ease-in-out;
- }
+.carousel.two {
+    animation: slideInRight 1.5s ease-in-out;
+}
 
- /* Gradient Text */
- h1 span {
-     background: linear-gradient(100deg, #00DFC0, #86ed09);
-     background-clip: text;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
- }
+/* Gradient Text */
+.title-heading .title-span {
+    background: linear-gradient(100deg, #00DFC0, #86ed09);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
- /* Carousel Image Effects */
- .carousel-img {
-     transition: transform 0.5s ease, box-shadow 0.5s ease;
-     border-radius: 15px;
-     height: 500px;
-     /* Adjust height as needed */
-     object-fit: cover;
-     /* Ensures the image fills the container proportionally */
- }
+/* Carousel Image Effects */
+.carousel-img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 15px;
+    height: 500px;
+    /* Adjust height as needed */
+    object-fit: cover;
+    /* Ensures the image fills the container proportionally */
+}
 
- .carousel-img:hover {
-     transform: scale(1.05);
- }
+.carousel-img:hover {
+    transform: scale(1.05);
+}
 
- /* Carousel Controls Styling */
- .carousel-control-prev-icon,
- .carousel-control-next-icon {
-     filter: invert(1) brightness(0.8);
- }
+/* Carousel Alignment */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    /* Centered */
+    align-items: center;
+    width: 100%;
+}
 
- .bgimage {
-     background-image: url('/assets/homebgimage.jpg');
-     background-position: center;
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
- }
+/* Carousel Controls Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) brightness(0.8);
+}
 
- .scroll-down {
-     position: absolute;
-     left: 50%;
-     bottom: 10%;
-     transform: translateX(-50%);
-     font-size: 40px;
-     color: rgb(16, 15, 15);
-     cursor: pointer;
- }
+/* Background Image */
+.bgimage {
+    background-image: url('/assets/homebgimage.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
- .scroll-down a {
-     text-decoration: none;
-     color: inherit;
- }
+/* Scroll Down Button - Keeping the Position */
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    /* Keeping original position */
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: rgb(16, 15, 15);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
 
- @media (max-width: 500px) {
-     .carousel-img {
-         height: 250px;
-     }
- }
+.scroll-down:hover {
+    opacity: 0.8;
+}
 
- @keyframes fadeIn {
-     from {
-         opacity: 0;
-     }
+.scroll-down a {
+    text-decoration: none;
+    color: inherit;
+}
 
-     to {
-         opacity: 1;
-     }
- }
+/* Mobile & Tablet Adjustments */
+@media (max-width: 768px) {
 
- @keyframes slideInLeft {
-     from {
-         transform: translateX(-100%);
-         opacity: 0;
-     }
+    /* Adjust Carousel Image */
+    .carousel-img {
+        height: 300px;
+    }
 
-     to {
-         transform: translateX(0);
-         opacity: 1;
-     }
- }
+    /* Ensure Carousel is Fully Centered */
+    .carousel-container {
+        justify-content: center;
+    }
 
- @keyframes slideInRight {
-     from {
-         transform: translateX(100%);
-         opacity: 0;
-     }
+    /* Keep Scroll-Down Position but Adjust Size */
+    .scroll-down {
+        font-size: 30px;
+    }
+}
 
-     to {
-         transform: translateX(0);
-         opacity: 1;
-     }
- }
+@media (max-width: 500px) {
+
+    /* Smaller Carousel Image */
+    .carousel-img {
+        height: 250px;
+    }
+
+    /* Keep Scroll-Down Position */
+    .scroll-down {
+        font-size: 25px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

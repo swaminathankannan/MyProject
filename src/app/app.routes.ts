@@ -16,8 +16,7 @@ export const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
+      { path: '', component: HomeComponent }, // No redirect, directly loads home
       { path: 'about', component: AboutComponent },
       { path: 'skills', component: SkillsComponent },
       { path: 'projects', component: ProjectsComponent },

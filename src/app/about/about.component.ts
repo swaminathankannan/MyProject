@@ -1,11 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import {
-  ChangeDetectorRef,
-  Component,
-  Inject,
-  OnInit,
-  PLATFORM_ID,
-} from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, OnInit, AfterViewInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -14,7 +8,7 @@ import {
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
   activeSlide: number = 1;
   totalSlides: number = 2;
   carousel: any;
@@ -28,48 +22,53 @@ export class AboutComponent implements OnInit {
     this.loadCarouselItems();
   }
 
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      const carouselElement = document.getElementById('carouselDesktop');
-      if (carouselElement) {
-        this.carousel = new (window as any).bootstrap.Carousel(carouselElement);
-        carouselElement.addEventListener('slid.bs.carousel', (event: any) => {
-          console.log('Slide changed:', event.to + 1);
-          this.activeSlide = event.to + 1;
-          this.cdr.detectChanges();
-        });
-      }
+  ngOnInit() {}
 
-      const carouselElementMobile = document.getElementById('carouselMobile');
-      if (carouselElementMobile) {
-        this.carouselMobile = new (window as any).bootstrap.Carousel(
-          carouselElementMobile
-        );
-        carouselElementMobile.addEventListener(
-          'slid.bs.carousel',
-          (event: any) => {
-            console.log('Mobile slide changed:', event.to + 1);
-            this.activeSlide = event.to + 1;
-            this.cdr.detectChanges();
-          }
-        );
-      }
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.initializeCarousel();
+    }
+  }
+
+  initializeCarousel() {
+    const carouselElement = document.getElementById('carouselDesktop');
+    if (carouselElement) {
+      this.carousel = new (window as any).bootstrap.Carousel(carouselElement, {
+        interval: false, // Disable auto sliding
+        ride: false, 
+        wrap: false, // Prevent infinite looping
+      });
+
+      carouselElement.addEventListener('slid.bs.carousel', (event: any) => {
+        this.activeSlide = event.to + 1;
+        this.cdr.detectChanges();
+      });
+    }
+
+    const carouselElementMobile = document.getElementById('carouselMobile');
+    if (carouselElementMobile) {
+      this.carouselMobile = new (window as any).bootstrap.Carousel(carouselElementMobile, {
+        interval: false,
+        ride: false,
+        wrap: false,
+      });
+
+      carouselElementMobile.addEventListener('slid.bs.carousel', (event: any) => {
+        this.activeSlide = event.to + 1;
+        this.cdr.detectChanges();
+      });
     }
   }
 
   loadCarouselItems() {
     this.carouselItems = [
       {
-        title: 'Education 2019-2022 And 2023 - 2025',
-        description:
-          'Completed BSc in Computer Science followed by MSc in Computer Science.',
-        extra: '',
+        title: 'Education 2019-2022 And 2023-2025',
+        description: 'Completed BSc Computer Science at National College Trichy followed by corress MSc in Computer Science at Pioneer arts and science college in Bharathidasan University',
       },
       {
         title: 'Experience',
-        description:
-          'As a dedicated Front-End Developer and Software Engineer, I am passionate about creating intuitive user experiences through modern web technologies. I am committed to continuous learning and staying current with industry trends, aspiring to contribute to innovative projects that integrate front-end and back-end systems seamlessly',
-        extra: '',
+        description: 'As a dedicated Front-End Developer and Software Engineer at Niiv software private limited in Trichy with 2 years of experience, I am passionate about creating intuitive user experiences through modern web technologies. I am committed to continuous learning and staying current with industry trends.',
       },
     ];
   }
@@ -77,7 +76,7 @@ export class AboutComponent implements OnInit {
   nextSlide() {
     if (this.carousel) {
       this.carousel.next();
-      this.activeSlide = Math.min(this.activeSlide + 1, this.totalSlides); // Prevent going beyond total slides
+      this.activeSlide = Math.min(this.activeSlide + 1, this.totalSlides);
     }
     if (this.carouselMobile) {
       this.carouselMobile.next();
@@ -88,7 +87,7 @@ export class AboutComponent implements OnInit {
   prevSlide() {
     if (this.carousel) {
       this.carousel.prev();
-      this.activeSlide = Math.max(this.activeSlide - 1, 1); // Prevent going below 1
+      this.activeSlide = Math.max(this.activeSlide - 1, 1);
     }
     if (this.carouselMobile) {
       this.carouselMobile.prev();

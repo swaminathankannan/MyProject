@@ -1,48 +1,55 @@
 <section>
-	<div class="text-center">
-		<h2 class="h1 dark-blue text-center pb-5">Projects</h2>
-		<h1>See My Works Which Will Amaze You!</h1>
-		<p class="Poppins h4">
-			Develop the best quality website that serves for the long term. Well-documented, clean,
-			easy, and elegant interface helps any non-technical clients.
-		</p>
-	</div>
+	<div class="container">
+		<div class="row align-items-center">
+			<!-- Left Side: Text Content -->
+			<div class="col-12 col-md-6 text-center text-md-start pb-3 pb-md-5">
+				<div class="text-center py-4 one">
+					<h3 class="headingOne dark-blue pb-3 d-block">Projects</h3>
+				</div>
+				<h1 class="fw-bold">See My Works Which Will Amaze You!</h1>
+				<p class="h4">
+					Develop the best quality website that serves for the long term. Well-documented, clean,
+					easy, and elegant interface helps any non-technical clients.
+				</p>
+			</div>
 
-	<div class="swiper">
-		<div class="swiper-wrapper">
-			<div class="contenedor">
-				<div *ngFor="let card of cards; let i = index" class="card"
-					[ngClass]="{ 'principal': i === currentStep, 'siguiente': i > currentStep, 'anterior': i < currentStep }"
-					[style.backgroundColor]="card.backgroundColor" ontouchstart="onTouchStart($event)"
-					ontouchend="onTouchEnd($event)">
-					<div class="card-image">
-						<img [src]="card.image" [alt]="card.title">
-						<div class="overlay">
-							<a [href]="card.link" target="_blank" class="link-icon">
-								<i class="fas fa-external-link-alt"></i>
-							</a>
+			<!-- Right Side: Swiper Slider -->
+			<div class="col-12 col-md-6 d-flex justify-content-center">
+				<div class="swiper w-100">
+					<div class="swiper-wrapper">
+						<div class="contenedor">
+							<div *ngFor="let card of cards; let i = index" class="card"
+								[ngClass]="{ 'principal': i === currentStep, 'siguiente': i > currentStep, 'anterior': i < currentStep }"
+								[style.backgroundColor]="card.backgroundColor" ontouchstart="onTouchStart($event)"
+								ontouchend="onTouchEnd($event)">
+								<div class="card-image">
+									<img [src]="card.image" [alt]="card.title" class="img-fluid rounded">
+									<div class="overlay">
+										<a [href]="card.link" target="_blank" class="link-icon">
+											<i class="fas fa-external-link-alt"></i>
+										</a>
+									</div>
+								</div>
+								<div class="card-content bg-white p-3 rounded text-center">
+									<h3 class="fw-bold">{{ card.title }}</h3>
+									<p>{{ card.description }}</p>
+									<div class="card-navigation">
+										<div>
+											<span *ngFor="let dot of cards; let j = index" class="dot"
+												[ngClass]="{'active-dot': j === currentStep}"></span>
+										</div>
+										<div class="buttons">
+											<button *ngIf="currentStep > 0" (click)="previousCard()" class="previous-button">&#8592;</button>
+											<button *ngIf="currentStep < cards.length - 1" (click)="nextCard()" class="next-button">&#8594;</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="card-content" style="background-color: white;">
-						<h3>{{ card.title }}</h3>
-						<p>{{ card.description }}</p>
-						<div class="card-navigation">
-							<div>
-								<span *ngFor="let dot of cards; let j = index" class="dot"
-									[ngClass]="{'active-dot': j === currentStep}">
-								</span>
-							</div>
-							<div class="buttons">
-								<button *ngIf="currentStep > 0" (click)="previousCard()"
-									class="previous-button">&#8592;</button>
-								<button *ngIf="currentStep < cards.length - 1" (click)="nextCard()"
-									class="next-button">&#8594;</button>
-							</div>
-						</div>
-					</div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</div>
 		</div>
-		<div class="swiper-pagination"></div>
 	</div>
 </section>

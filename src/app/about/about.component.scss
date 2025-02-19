@@ -1,17 +1,5 @@
 :host {
 
-  .responsive-img {
-    max-width: 100%;
-  }
-
-  @media (max-width: 575.98px) {
-
-    /* Bootstrap's mobile breakpoint */
-    .responsive-img {
-      max-width: 80%;
-    }
-  }
-
   .btn-carousel {
     border: none;
     background: none;
@@ -29,17 +17,6 @@
   }
 
 
-
-  @media (max-width: 1199px) {
-    .mobile {
-      display: contents !important;
-    }
-
-    .desktop {
-      display: none !important;
-    }
-
-  }
 
   @media (min-width: 1200px) {
     .desktop {
@@ -95,5 +72,4 @@
       background-color: black;
     }
   }
-
 }
